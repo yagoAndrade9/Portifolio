@@ -61,11 +61,11 @@ nav ul li a:hover {
 }
 
 #about {
-  min-width: 100vh;
+   min-height: 100vh;
    display: flex;
    align-items: center;
    padding: 0 40px;
-   margin-top: 80px; 
+   margin-top: 0px; 
 }
 
 .about-content {
