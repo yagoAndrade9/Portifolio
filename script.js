@@ -222,3 +222,18 @@ gsap.utils.toArray(".counter").forEach(counter => {
     }
   })
 })
+
+gsap.utils.toArray(".timeline-item").forEach((item, index) => {
+  gsap.from(item, {
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play reverse play reverse"
+    },
+    x: -60,
+    opacity: 0,
+    duration: 0.6,
+    delay: index * 0.15,
+    ease: "power3.out"
+  })
+})

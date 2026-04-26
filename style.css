@@ -388,3 +388,56 @@ body.light footer {
   margin-top: 8px;
   font-size: 16px;
 }
+
+#timeline {
+  padding: 80px 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 48px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.timeline-date {
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.timeline-content p {
+  color: rgb(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
