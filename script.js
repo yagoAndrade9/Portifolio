@@ -22,7 +22,7 @@ function drawStars() {
   stars.forEach(star => {
     ctx.beginPath()
     ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
-    ctx.fillStyle = "white"
+    ctx.fillStyle = document.body.classList.contains("light") ? "#111111" : "white"
     ctx.fill()
 
     star.y += star.speed
@@ -153,4 +153,72 @@ window.addEventListener("scroll", () => {
   const progress = (scrollTop / docHeight) * 100
 
   progressBar.style.width = progress + "%"
+})
+
+// Texto que vai ser digitado
+const name = "Yago Andrade Oliveira"
+
+// Posição atual da digitação
+let i = 0
+
+function type() {
+  // Se ainda tem letras para digitar
+  if (i < name.length) {
+    // Adiciona a próxima letra
+    document.getElementById("typed-name").textContent += name[i]
+    i++
+    // Espera 100ms e digita a próxima letra
+    setTimeout(type, 100)
+  }
+}
+
+// Inicia a digitação após 1 segundo
+setTimeout(type, 1000)
+
+const backToTop = document.getElementById("back-to-top")
+
+// Mostra o botão quando rolar mais de 400px
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.add("visible")
+  } else {
+    backToTop.classList.remove("visible")
+  }
+})
+
+// Ao clicar, volta ao topo suavemente
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" })
+})
+
+const themeToggle = document.getElementById("theme-toggle")
+
+themeToggle.addEventListener("click", () => {
+  // Alterna a classe light no body
+  document.body.classList.toggle("light")
+
+  // Troca o ícone
+  if (document.body.classList.contains("light")) {
+    themeToggle.textContent = "☀️"
+  } else {
+    themeToggle.textContent = "🌙"
+  }
+})
+
+// Contador animado
+gsap.utils.toArray(".counter").forEach(counter => {
+  const target = parseInt(counter.getAttribute("data-target"))
+
+  ScrollTrigger.create({
+    trigger: counter,
+    start: "top 85%",
+    onEnter: () => {
+      gsap.to(counter, {
+        innerHTML: target,
+        duration: 2,
+        ease: "power2.out",
+        snap: { innerHTML: 1 }
+      })
+    }
+  })
 })
