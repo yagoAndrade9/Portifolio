@@ -114,3 +114,43 @@ gsap.from(".contact-content", {
   duration: 0.8,
   ease: "power3.out"
 })
+
+const cursor = document.getElementById("cursor")
+const cursorDot = document.getElementById("cursor-dot")
+
+window.addEventListener("mousemove", e => {
+  // O círculo grande segue com delay
+  gsap.to(cursor, {
+    x: e.clientX - 10,
+    y: e.clientY - 10,
+    duration: 0.15
+  })
+
+  // O ponto pequeno segue instantaneamente
+  gsap.to(cursorDot, {
+    x: e.clientX - 3,
+    y: e.clientY - 3,
+    duration: 0
+  })
+})
+
+// Efeito ao passar em cima de links e botões
+document.querySelectorAll("a, button, .skill").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    gsap.to(cursor, { scale: 2, duration: 0.2 })
+  })
+  el.addEventListener("mouseleave", () => {
+    gsap.to(cursor, { scale: 1, duration: 0.2 })
+  })
+})
+
+const progressBar = document.getElementById("progress-bar")
+
+window.addEventListener("scroll", () => {
+  // Calcula quantos % da página já foi rolado
+  const scrollTop = window.scrollY
+  const docHeight = document.body.scrollHeight - window.innerHeight
+  const progress = (scrollTop / docHeight) * 100
+
+  progressBar.style.width = progress + "%"
+})

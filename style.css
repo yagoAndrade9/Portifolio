@@ -184,12 +184,14 @@ nav ul li a:hover {
   border-radius: 32px;
   color: var(--accent-color);
   font-weight: 600;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .skill:hover {
   background: var(--accent-color);
   color: var(--text-color);
+  box-shadow: 0 0 12px var(--accent-color), 0 0 24px var(--accent-color);
+  transform: scale(1.08);
 }
 
 #contact {
@@ -242,3 +244,40 @@ footer {
   z-index: -1;
   background-color: #0a0a0a;
 }
+
+* {
+  cursor: none;
+}
+
+#cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+#cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent-color);
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
