@@ -339,6 +339,18 @@ body.light {
   --accent-color: #5b52e0;
 }
 
+body.light .stat p {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+body.light .timeline-content p {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+body.light .timeline::before {
+  background: rgb(0, 0, 0, 0.15);
+}
+
 body.light #stars {
   background-color: #f5f5f5;
 }
