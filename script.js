@@ -119,3 +119,20 @@ function showTab(tab, el) {
   document.getElementById('tab-' + tab).classList.add('active')
   el.classList.add('active')
 }
+
+// ═══════════════════════════════
+// ANIMAÇÃO DA JORNADA
+// ═══════════════════════════════
+const timelineObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible')
+    } else {
+      entry.target.classList.remove('visible')
+    }
+  })
+}, { threshold: 0.2 })
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+  timelineObserver.observe(item)
+})

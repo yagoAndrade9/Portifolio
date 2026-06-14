@@ -688,3 +688,13 @@ body.light footer {
   border-color: var(--accent-color);
 }
 
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
