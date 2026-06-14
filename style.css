@@ -692,3 +692,7 @@ body.light footer {
 .tab-content.active .cert-card img {
   opacity: 1 !important;
 }
+
+.cert-card img {
+  opacity: 1 !important;
+}

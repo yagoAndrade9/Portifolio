@@ -90,32 +90,6 @@ gsap.utils.toArray(".project-card").forEach((card, index) => {
   })
 })
 
-gsap.utils.toArray(".timeline-item").forEach((item, index) => {
-  gsap.from(item, {
-    scrollTrigger: {
-      trigger: item,
-      start: "top 85%",
-      toggleActions: "play reverse play reverse"
-    },
-    x: -60,
-    opacity: 0,
-    duration: 0.6,
-    delay: index * 0.15,
-    ease: "power3.out"
-  })
-})
-
-gsap.from(".contact-grid", {
-  scrollTrigger: {
-    trigger: ".contact-grid",
-    start: "top 85%",
-    toggleActions: "play reverse play reverse"
-  },
-  y: 60,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power3.out"
-})
 
 // ═══════════════════════════════
 // CONTADORES
