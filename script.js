@@ -90,21 +90,6 @@ gsap.utils.toArray(".project-card").forEach((card, index) => {
   })
 })
 
-gsap.utils.toArray(".skill").forEach((skill, index) => {
-  gsap.from(skill, {
-    scrollTrigger: {
-      trigger: skill,
-      start: "top 90%",
-      toggleActions: "play reverse play reverse"
-    },
-    scale: 0,
-    opacity: 0,
-    duration: 0.4,
-    delay: index * 0.1,
-    ease: "back.out(1.7)"
-  })
-})
-
 gsap.utils.toArray(".timeline-item").forEach((item, index) => {
   gsap.from(item, {
     scrollTrigger: {
