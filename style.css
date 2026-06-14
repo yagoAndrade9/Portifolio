@@ -688,11 +688,3 @@ body.light footer {
   border-color: var(--accent-color);
 }
 
-.tab-content.active .skill,
-.tab-content.active .cert-card img {
-  opacity: 1 !important;
-}
-
-.cert-card img {
-  opacity: 1 !important;
-}

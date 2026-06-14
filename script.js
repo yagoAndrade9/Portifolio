@@ -43,10 +43,8 @@ window.addEventListener("resize", () => {
 })
 
 // ═══════════════════════════════
-// GSAP ANIMAÇÕES
+// GSAP — SÓ ANIMAÇÕES DE ENTRADA
 // ═══════════════════════════════
-gsap.registerPlugin(ScrollTrigger)
-
 gsap.from(".about-image", {
   x: 100,
   opacity: 0,
@@ -61,39 +59,11 @@ gsap.from(".about-text", {
   ease: "power3.out"
 })
 
-gsap.utils.toArray(".section-content h2").forEach(title => {
-  gsap.from(title, {
-    scrollTrigger: {
-      trigger: title,
-      start: "top 85%",
-      toggleActions: "play reverse play reverse"
-    },
-    y: 50,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out"
-  })
-})
-
-gsap.utils.toArray(".project-card").forEach((card, index) => {
-  gsap.from(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: "top 85%",
-      toggleActions: "play reverse play reverse"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 0.6,
-    delay: index * 0.1,
-    ease: "power3.out"
-  })
-})
-
-
 // ═══════════════════════════════
 // CONTADORES
 // ═══════════════════════════════
+gsap.registerPlugin(ScrollTrigger)
+
 gsap.utils.toArray(".counter").forEach(counter => {
   const target = parseInt(counter.getAttribute("data-target"))
   gsap.to(counter, {
@@ -107,23 +77,6 @@ gsap.utils.toArray(".counter").forEach(counter => {
     snap: { innerHTML: 1 }
   })
 })
-
-// ═══════════════════════════════
-// EFEITO DE DIGITAÇÃO
-// ═══════════════════════════════
-const typedName = document.getElementById("typed-name")
-if (typedName) {
-  const name = "Yago Andrade Oliveira"
-  let i = 0
-  function type() {
-    if (i < name.length) {
-      typedName.textContent += name[i]
-      i++
-      setTimeout(type, 100)
-    }
-  }
-  setTimeout(type, 1000)
-}
 
 // ═══════════════════════════════
 // BOTÃO VOLTAR AO TOPO
