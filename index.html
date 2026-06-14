@@ -6,15 +6,16 @@
     <title>Meu Portfólio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   </head>
   <body>
     <canvas id="stars"></canvas>
     <div id="progress-bar"></div>
     <div id="cursor"></div>
     <div id="cursor-dot"></div>
+
     <header>
       <nav>
         <span class="logo">Sobre mim</span>
@@ -27,145 +28,165 @@
         <button id="theme-toggle">🌙</button>
       </nav>
     </header>
+
     <main>
+
+      <!-- Sobre mim -->
       <section id="about">
         <div class="about-content">
-          <img src="./Portifolio/assets/avatar.png.webp" alt="Foto de perfil" />
+          <img src="./assets/avatar.png.webp" alt="Foto de perfil" />
           <div class="about-text">
-           <h1>Olá, eu sou <span id="typed-name"></span> 👋</h1>
+            <h1>Olá, eu sou <span id="typed-name"></span> 👋</h1>
             <p>
-              Sou estudante de desenvolvimento web e faço gestão da tecnologia da informação, apaixonado por criar interfaces
-              bonitas e funcionais. Estou aprendendo HTML, CSS e em breve JavaScript!
+              Sou estudante de desenvolvimento web e faço gestão da tecnologia da informação,
+              apaixonado por criar interfaces bonitas e funcionais.
+              Estou aprendendo HTML, CSS e em breve JavaScript!
             </p>
             <a href="#contact" class="btn">Entre em contato</a>
           </div>
         </div>
       </section>
+
+      <!-- Contadores -->
       <section id="stats">
-  <div class="section-content">
-    <div class="stats-grid">
-      <div class="stat">
-        <h3><span class="counter" data-target="2">0</span>+</h3>
-        <p>Projetos concluídos</p>
-      </div>
-      <div class="stat">
-        <h3><span class="counter" data-target="200">0</span>+</h3>
-        <p>Horas estudadas</p>
-      </div>
-      <div class="stat">
-        <h3>∞</h3>
-        <p>Cafés tomados</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="section-content">
+          <div class="stats-grid">
+            <div class="stat">
+              <h3><span class="counter" data-target="5">0</span>+</h3>
+              <p>Projetos concluídos</p>
+            </div>
+            <div class="stat">
+              <h3><span class="counter" data-target="200">0</span>+</h3>
+              <p>Horas estudadas</p>
+            </div>
+            <div class="stat">
+              <h3>∞</h3>
+              <p>Cafés tomados</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos -->
       <section id="projects">
         <div class="section-content">
           <h2>Projetos <span>recentes</span></h2>
-         <div class="cards">
-  <div class="card">
-    <h3>Link Bio</h3>
-    <p>Página de links com tema claro e escuro, feita com HTML e CSS puro.</p>
-    <a href="https://yagoandrade9.github.io/Projeto-Rockseat/" target="_blank" class="btn">Ver projeto</a>
-  </div>
-  <div class="card">
-    <h3>Portfólio</h3>
-    <p>Este portfólio que você está vendo agora, feito do zero!</p>
-    <a href="https://yagoandrade9.github.io/Portifolio/" target="_blank" class="btn">Ver projeto</a>
-  </div>
-  <div class="card">
-    <h3>Loja Tech</h3>
-    <p>Sistema de gestão para loja de tecnologia com 24 telas prototipadas no Figma.</p>
-    <a href="./assets/ADO2_21_05_2026.pdf" target="_blank" class="btn">Ver projeto</a>
-  </div>
-  <div class="card">
-    <h3>FinTrack</h3>
-    <p>Concepção de produto digital de finanças pessoais para jovens adultos.</p>
-    <a href="./assets/fintrack.pdf" target="_blank" class="btn">Ver projeto</a>
-  </div>
-  <div class="card">
-    <h3>TripPlanner</h3>
-    <p>Sistema de planejamento de viagens com foco em UX e experiência do usuário.</p>
-    <a href="./assets/HANDS_ON.pdf" target="_blank" class="btn">Ver projeto</a>
-  </div>
-</div>
+          <div class="cards">
+
+            <div class="card">
+              <h3>Link Bio</h3>
+              <p>Página de links com tema claro e escuro, feita com HTML e CSS puro.</p>
+              <a href="https://yagoandrade9.github.io/Projeto-Rockseat/" target="_blank" class="btn">Ver projeto</a>
+            </div>
+
+            <div class="card">
+              <h3>Portfólio</h3>
+              <p>Este portfólio que você está vendo agora, feito do zero!</p>
+              <a href="https://yagoandrade9.github.io/Portifolio/" target="_blank" class="btn">Ver projeto</a>
+            </div>
+
+            <div class="card">
+              <h3>Loja Tech</h3>
+              <p>Sistema de gestão para loja de tecnologia com 24 telas prototipadas no Figma.</p>
+              <a href="./assets/ADO2_21_05_2026.pdf" target="_blank" class="btn">Ver projeto</a>
+            </div>
+
+            <div class="card">
+              <h3>FinTrack</h3>
+              <p>Concepção de produto digital de finanças pessoais para jovens adultos.</p>
+              <a href="./assets/fintrack.pdf" target="_blank" class="btn">Ver projeto</a>
+            </div>
+
+            <div class="card">
+              <h3>TripPlanner</h3>
+              <p>Sistema de planejamento de viagens com foco em UX e experiência do usuário.</p>
+              <a href="./assets/HANDS_ON.pdf" target="_blank" class="btn">Ver projeto</a>
+            </div>
+
+          </div>
         </div>
       </section>
+
+      <!-- Habilidades -->
       <section id="skills">
-  <div class="section-content">
-    <h2>Minhas <span>habilidades</span></h2>
-    <div class="skills-grid">
-      <div class="skill">
-        <i class="devicon-html5-plain colored"></i>
-        <span>HTML</span>
-         </div>
+        <div class="section-content">
+          <h2>Minhas <span>habilidades</span></h2>
+          <div class="skills-grid">
+            <div class="skill">
+              <i class="devicon-html5-plain colored"></i>
+              <span>HTML</span>
+            </div>
             <div class="skill">
               <i class="devicon-css3-plain colored"></i>
-          <span>CSS</span>
-         </div>
-         <div class="skill">
-            <i class="devicon-git-plain colo red"></i>
-             <span>Git</span>
-          </div>
-           <div class="skill">
-             <i class="devicon-github-original colored"></i>
-             <span>GitHub</span>
-           </div>
-           <div class="skill">
-               <i class="devicon-vscode-plain colored"></i>
-               <span>VS Code</span>
+              <span>CSS</span>
             </div>
-             <div class="skill">
+            <div class="skill">
+              <i class="devicon-git-plain colored"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill">
+              <i class="devicon-github-original colored"></i>
+              <span>GitHub</span>
+            </div>
+            <div class="skill">
+              <i class="devicon-vscode-plain colored"></i>
+              <span>VS Code</span>
+            </div>
+            <div class="skill">
               <i class="devicon-javascript-plain colored"></i>
               <span>JavaScript</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="timeline">
-  <div class="section-content">
-    <h2>Minha <span>jornada</span></h2>
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2024</span>
-          <h3>Início na programação</h3>
-          <p>Comecei a aprender HTML e CSS do zero pela Rocketseat.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2024</span>
-          <h3>Primeiro projeto</h3>
-          <p>Desenvolvi meu primeiro projeto — o Link Bio com tema claro e escuro.</p>
+      <!-- Jornada -->
+      <section id="timeline">
+        <div class="section-content">
+          <h2>Minha <span>jornada</span></h2>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2024</span>
+                <h3>Início na programação</h3>
+                <p>Comecei a aprender HTML e CSS do zero pela Rocketseat.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2024</span>
+                <h3>Primeiro projeto</h3>
+                <p>Desenvolvi meu primeiro projeto — o Link Bio com tema claro e escuro.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025</span>
+                <h3>JavaScript</h3>
+                <p>Iniciei os estudos de JavaScript e comecei a adicionar interatividade nos projetos.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025</span>
+                <h3>Portfólio</h3>
+                <p>Desenvolvi meu portfólio profissional com animações e tema claro/escuro.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2025</span>
-          <h3>JavaScript</h3>
-          <p>Iniciei os estudos de JavaScript e comecei a adicionar interatividade nos projetos.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2025</span>
-          <h3>Portfólio</h3>
-          <p>Desenvolvi meu portfólio profissional com animações e tema claro/escuro.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      <!-- Contato -->
       <section id="contact">
         <div class="section-content contact-content">
           <h2>Entre em <span>contato</span></h2>
@@ -177,10 +198,13 @@
           </div>
         </div>
       </section>
+
     </main>
+
     <footer>
       <p>Feito por Yago Andrade Oliveira</p>
     </footer>
+
     <button id="back-to-top">↑</button>
     <script src="script.js"></script>
   </body>
