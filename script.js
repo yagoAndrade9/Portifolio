@@ -237,3 +237,10 @@ gsap.utils.toArray(".timeline-item").forEach((item, index) => {
     ease: "power3.out"
   })
 })
+
+function showTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'))
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
+  document.getElementById('tab-' + tab).classList.add('active')
+  event.target.classList.add('active')
+}

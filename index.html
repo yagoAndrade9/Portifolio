@@ -12,9 +12,6 @@
   </head>
   <body>
     <canvas id="stars"></canvas>
-    <div id="progress-bar"></div>
-    <div id="cursor"></div>
-    <div id="cursor-dot"></div>
 
     <header>
       <nav>
@@ -32,21 +29,28 @@
     <main>
 
       <!-- Sobre mim -->
-      <section id="about">
-        <div class="about-content">
-         <img src="./assets/avatar.png.webp" alt="Foto de perfil" />
-          <div class="about-text">
-            <h1>Olá, eu sou <span id="typed-name"></span> 👋</h1>
-            <p>
-              Sou estudante de Gestão de Tecnologia da Informação no Senac São Paulo, 
-              apaixonado por UX, Product Owner e desenvolvimento web. 
-              Estou construindo projetos reais e buscando minha primeira oportunidade 
-              como estagiário na área de tecnologia.
-            </p>
-            <a href="#contact" class="btn">Entre em contato</a>
-          </div>
-        </div>
-      </section>
+     <section id="about">
+     <div class="about-content">
+         <div class="about-text">
+          <p class="about-greeting">Olá, eu sou</p>
+           <h1>Yago Andrade Oliveira</h1>
+          <p class="about-description">
+             Sou estudante de Gestão de Tecnologia da Informação no Senac São Paulo,
+            apaixonado por UX, Product Owner e desenvolvimento web.
+            Estou construindo projetos reais e buscando minha primeira oportunidade
+            como estagiário na área de tecnologia.
+          </p>
+            <div class="about-buttons">
+                <a href="./assets/curriculo.pdf" target="_blank" class="btn">📄 Download CV</a>
+                <a href="#projects" class="btn btn-outline">Ver Projetos</a>
+            </div>
+           </div>
+          <div class="about-image">
+        <div class="glow"></div>
+      <img src="./assets/avatar.png.webp" alt="Foto de perfil" />
+    </div>
+  </div>
+</section>
 
       <!-- Contadores -->
       <section id="stats">
@@ -70,44 +74,116 @@
 
       <!-- Projetos -->
       <section id="projects">
-        <div class="section-content">
-          <h2>Projetos <span>recentes</span></h2>
-          <div class="cards">
+  <div class="section-content">
+    <h2>Vitrine de <span>Portfólio</span></h2>
+    <p class="section-subtitle">Explore projetos, certificações e stacks que refletem a minha evolução contínua em tecnologia.</p>
 
-            <div class="card">
-              <h3>Link Bio</h3>
-              <p>Página de links com tema claro e escuro, feita com HTML e CSS puro.</p>
-              <a href="https://yagoandrade9.github.io/Projeto-Rockseat/" target="_blank" class="btn">Ver projeto</a>
-            </div>
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('projetos')">⟨/⟩ Projetos</button>
+      <button class="tab" onclick="showTab('certificados')">🎓 Certificados</button>
+      <button class="tab" onclick="showTab('stack')">⚙️ Stack Tecnológica</button>
+    </div>
 
-            <div class="card">
-              <h3>Portfólio</h3>
-              <p>Este portfólio que você está vendo agora, feito do zero!</p>
-              <a href="https://yagoandrade9.github.io/Portifolio/" target="_blank" class="btn">Ver projeto</a>
-            </div>
+    <!-- Projetos -->
+    <div id="tab-projetos" class="tab-content active">
+      <div class="project-cards">
 
-            <div class="card">
-              <h3>Loja Tech</h3>
-              <p>Sistema de gestão para loja de tecnologia com 24 telas prototipadas no Figma.</p>
-              <a href="./assets/ADO2_21_05_2026.pdf" target="_blank" class="btn">Ver projeto</a>
-            </div>
-
-            <div class="card">
-              <h3>FinTrack</h3>
-              <p>Concepção de produto digital de finanças pessoais para jovens adultos.</p>
-              <a href="./assets/fintrack.pdf" target="_blank" class="btn">Ver projeto</a>
-            </div>
-
-            <div class="card">
-              <h3>TripPlanner</h3>
-              <p>Sistema de planejamento de viagens com foco em UX e experiência do usuário.</p>
-              <a href="./assets/HANDS_ON.pdf" target="_blank" class="btn">Ver projeto</a>
-            </div>
-
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./assets/preview-linkbio.png" alt="Link Bio" />
+          </div>
+          <h3>Link Bio</h3>
+          <p>Página de links com tema claro e escuro, feita com HTML e CSS puro.</p>
+          <div class="project-links">
+            <a href="https://yagoandrade9.github.io/Projeto-Rockseat/" target="_blank">Ver demo ↗</a>
+            <a href="https://github.com/yagoAndrade9" target="_blank">Detalhes →</a>
           </div>
         </div>
-      </section>
 
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./assets/preview-portfolio.png" alt="Portfólio" />
+          </div>
+          <h3>Portfólio</h3>
+          <p>Portfólio profissional com animações GSAP, estrelas animadas e tema claro/escuro.</p>
+          <div class="project-links">
+            <a href="https://yagoandrade9.github.io/Portifolio/" target="_blank">Ver demo ↗</a>
+            <a href="https://github.com/yagoAndrade9" target="_blank">Detalhes →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./assets/preview-lojatec.png" alt="Loja Tech" />
+          </div>
+          <h3>Loja Tech</h3>
+          <p>Sistema de gestão para loja de tecnologia com 24 telas prototipadas no Figma.</p>
+          <div class="project-links">
+            <a href="./assets/ADO2_21_05_2026.pdf" target="_blank">Ver demo ↗</a>
+            <a href="./assets/ADO2_21_05_2026.pdf" target="_blank">Detalhes →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./assets/preview-fintrack.png" alt="FinTrack" />
+          </div>
+          <h3>FinTrack</h3>
+          <p>Concepção de produto digital de finanças pessoais para jovens adultos.</p>
+          <div class="project-links">
+            <a href="./assets/fintrack.pdf" target="_blank">Ver demo ↗</a>
+            <a href="./assets/fintrack.pdf" target="_blank">Detalhes →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./assets/preview-tripplanner.png" alt="TripPlanner" />
+          </div>
+          <h3>TripPlanner</h3>
+          <p>Sistema de planejamento de viagens com foco em UX e experiência do usuário.</p>
+          <div class="project-links">
+            <a href="./assets/HANDS_ON.pdf" target="_blank">Ver demo ↗</a>
+            <a href="./assets/HANDS_ON.pdf" target="_blank">Detalhes →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Certificados -->
+    <div id="tab-certificados" class="tab-content">
+      <div class="cert-cards">
+        <div class="cert-card">
+          <img src="./assets/cert1.png" alt="Certificado 1" />
+        </div>
+        <div class="cert-card">
+          <img src="./assets/cert2.png" alt="Certificado 2" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Stack -->
+    <div id="tab-stack" class="tab-content">
+      <div class="skills-grid">
+        <div class="skill"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+        <div class="skill"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+        <div class="skill"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="skill"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+        <div class="skill"><i class="devicon-microsoftexcel-plain colored"></i><span>Excel</span></div>
+        <div class="skill"><i class="devicon-trello-plain colored"></i><span>Trello</span></div>
+        <div class="skill"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+        <div class="skill"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+        <div class="skill"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="skill"><span>Scrum</span></div>
+        <div class="skill"><span>UX Research</span></div>
+        <div class="skill"><span>Prototipação</span></div>
+        <div class="skill"><span>Levantamento de Requisitos</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
       <!-- Habilidades -->
       <section id="skills">
        <div class="section-content">
@@ -174,12 +250,15 @@
         <div class="skill">
           <span>Levantamento de Requisitos </span>
         </div>
-
+        
+        <div class="skill">
+          <span>Inglês — avançado (C1)</span>
+        </div>
     </div>
   </div>
 </section>
       <!-- Jornada -->
-      <<div class="timeline">
+      <div class="timeline">
 
   <div class="timeline-item">
     <div class="timeline-dot"></div>
@@ -248,24 +327,36 @@
 
       <!-- Contato -->
       <section id="contact">
-        <div class="section-content contact-content">
-          <h2>Entre em <span>contato</span></h2>
-          <p>Quer conversar sobre um projeto ou apenas dizer olá? Me manda uma mensagem!</p>
-          <div class="contact-links">
-            <a href="mailto:ayago9482@gmail.com" class="btn">📧 E-mail</a>
-            <a href="https://github.com/yagoAndrade9" target="_blank" class="btn btn-outline">GitHub</a>
-            <a href="https://linkedin.com/in/yago-andrade-355473292/" target="_blank" class="btn btn-outline">LinkedIn</a>
-          </div>
+  <div class="section-content">
+    <h2>Contacte-<span>me</span></h2>
+    <p class="section-subtitle">Tem um projeto ou dúvida? Escreva-me e responderei o mais rápido possível.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>Vamos conversar</h3>
+        <p>Aberto a oportunidades de estágio, projetos acadêmicos e colaborações na área de tecnologia e UX.</p>
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:ayago9482@gmail.com">ayago9482@gmail.com</a>
         </div>
-      </section>
+        <div class="contact-item">
+          <span>💼</span>
+          <a href="https://linkedin.com/in/yago-andrade-355473292/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="contact-item">
+          <span>🐙</span>
+          <a href="https://github.com/yagoAndrade9" target="_blank">GitHub</a>
+        </div>
+      </div>
 
-    </main>
+      <div class="contact-form">
+        <h3>Comentários</h3>
+        <input type="text" placeholder="Digite o seu nome" class="form-input" />
+        <textarea placeholder="Escreva a sua mensagem aqui..." class="form-textarea"></textarea>
+        <button class="btn">Enviar mensagem</button>
+      </div>
 
-    <footer>
-      <p>Feito por Yago Andrade Oliveira</p>
-    </footer>
-
-    <button id="back-to-top">↑</button>
-    <script src="script.js"></script>
-  </body>
-</html>
+    </div>
+  </div>
+</section>
