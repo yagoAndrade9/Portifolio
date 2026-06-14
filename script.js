@@ -198,8 +198,12 @@ if (themeToggle) {
 // ABAS
 // ═══════════════════════════════
 function showTab(tab, el) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'))
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
+  document.querySelectorAll('.tab-content').forEach(function(t) {
+    t.classList.remove('active')
+  })
+  document.querySelectorAll('.tab').forEach(function(t) {
+    t.classList.remove('active')
+  })
   document.getElementById('tab-' + tab).classList.add('active')
   el.classList.add('active')
 }
