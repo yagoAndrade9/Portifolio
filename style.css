@@ -687,3 +687,8 @@ body.light footer {
 .form-textarea:focus {
   border-color: var(--accent-color);
 }
+
+.tab-content.active .skill,
+.tab-content.active .cert-card img {
+  opacity: 1 !important;
+}
