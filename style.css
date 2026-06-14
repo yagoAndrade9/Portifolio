@@ -310,7 +310,6 @@ footer {
   background-color: #0a0a0a;
 }
 
-
 #back-to-top {
   position: fixed;
   bottom: 32px;
@@ -322,7 +321,7 @@ footer {
   border: none;
   border-radius: 50%;
   font-size: 20px;
-  cursor: none;
+  cursor: pointer;
   z-index: 999;
   opacity: 0;
   transform: translateY(20px);
@@ -345,7 +344,7 @@ footer {
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 18px;
-  cursor: none;
+  cursor: pointer;
   transition: border-color 0.3s;
 }
 

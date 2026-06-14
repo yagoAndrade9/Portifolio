@@ -137,17 +137,15 @@ gsap.from(".contact-grid", {
 // ═══════════════════════════════
 gsap.utils.toArray(".counter").forEach(counter => {
   const target = parseInt(counter.getAttribute("data-target"))
-  ScrollTrigger.create({
-    trigger: counter,
-    start: "top 85%",
-    onEnter: () => {
-      gsap.to(counter, {
-        innerHTML: target,
-        duration: 2,
-        ease: "power2.out",
-        snap: { innerHTML: 1 }
-      })
-    }
+  gsap.to(counter, {
+    scrollTrigger: {
+      trigger: counter,
+      start: "top 90%",
+    },
+    innerHTML: target,
+    duration: 2,
+    ease: "power2.out",
+    snap: { innerHTML: 1 }
   })
 })
 
