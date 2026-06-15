@@ -698,3 +698,78 @@ body.light footer {
   opacity: 1;
   transform: translateX(0);
 }
+
+.cert-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cert-card {
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+}
+
+.cert-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-info {
+  padding: 16px;
+}
+
+.cert-institution {
+  font-size: 12px;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cert-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-color);
+}
+
+.cert-year {
+  font-size: 13px;
+  color: rgb(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+}
+
+body.light .cert-year {
+  color: rgb(0, 0, 0, 0.4);
+}
+
+.cert-link {
+  font-size: 13px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.cert-link:hover {
+  opacity: 0.7;
+}
